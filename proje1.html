@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>proje1</title>
+    <style>
+        body {
+            background-color: rgb(250, 106, 106);
+            background-repeat: no-repeat;
+            background-size: cover;
+            color:white;
+            text-align: left;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 20px;
+            border-style: solid;
+            border-color: rgb(255, 255, 255);
+            margin-left: 20px;
+            margin-right: 20px;
+            padding-left: 20px;
+        }
+
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: rgb(20, 20, 20);
+            color: white;
+            text-align: center;
+}
+        
+    </style>
+<body>
+
+<div class="footer">
+  <p>© Volkan Karamehmet 2021</p>
+</div>
+
+<script type ="text/javascript">
+
+function listekaristir(a) {
+    for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+}
+
+a =0;
+
+while ( a <1)
+{
+   
+    var girdi = prompt("Lütfen bir değer giriniz.");  
+         
+  if(girdi.length >= 1  && girdi.length<10 )
+  {
+      
+      alert("İşlem tamamlandı.");
+      a=1;
+      
+  }
+  else
+  {
+        alert("Lütfen min 1 max 9 karakterlik değer giriniz.");
+
+  }
+  
+    
+}
+document.write("Girdi:",girdi,"<br>");
+
+    var arr = [];
+while(arr.length < girdi.length){
+    var r = Math.floor(Math.random() * girdi.length);
+    if(arr.indexOf(r) === -1) arr.push(r);
+} 
+        for(var i=0;i<girdi.length;i++)
+	{   
+	        listekaristir(arr);
+	    for (var j = 0; j <= i; j++) 
+	    {
+            document.write(girdi[arr[j]]); 
+	    }
+        document.write("<br>");
+}
+</script>
+</body>
+</head>
+</html>
